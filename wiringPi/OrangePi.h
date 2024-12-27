@@ -59,6 +59,15 @@
 #define MAP_SIZE_L                         (4096 * 2)
 #endif
 
+/************** Banana Pi P2 zero ***********************/
+#ifdef CONFIG_BANANAPI_P2_ZERO
+#define GPIOA_BASE                         (0x01C20000)
+#define GPIO_NUM                           (0x40)
+#define GPIO_BASE_MAP                      (0x01C20800)
+#define MEM_INFO                           (1024)
+#define MAP_SIZE_L                         (4096 * 2)
+#endif
+
 /************** OrangePi Zero ***********************/
 #ifdef CONFIG_ORANGEPI_ZERO
 #define GPIOA_BASE                         (0x01C20000)
@@ -107,6 +116,8 @@ extern int ORANGEPI_PIN_MASK[9][32];
 #elif CONFIG_ORANGEPI_A64
 extern int ORANGEPI_PIN_MASK[12][32];
 #elif CONFIG_ORANGEPI_H3
+extern int ORANGEPI_PIN_MASK[9][32];
+#elif CONFIG_BANANAPI_P2_ZERO
 extern int ORANGEPI_PIN_MASK[9][32];
 #elif CONFIG_ORANGEPI_ZERO
 extern int ORANGEPI_PIN_MASK[12][32];

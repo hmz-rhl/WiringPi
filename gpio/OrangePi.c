@@ -192,6 +192,69 @@ int physToWpi [64] =
 };
 #endif
 
+#ifdef CONFIG_BANANAPI_P2_ZERO
+int physToWpi[64] =
+{
+  -1,        // 0
+  -1,  -1,   // 1, 2
+   8,  -1,   // 3, 4
+   9,  -1,   // 5, 6
+   7,  15,   // 7, 8
+  -1,  16,   // 9, 10
+   0,   1,   //11, 12
+   2,  -1,   //13, 14
+   3,   4,   //15, 16
+  -1,   5,   //17, 18
+  12,  -1,   //19, 20
+  13,   6,   //21, 22
+  14,  10,   //23, 24
+  -1,  11,   //25, 26
+  30,  31,   //27, 28
+  21,  -1,   //29, 30
+  22,  26,   //31, 32
+  23,  -1,   //33, 34
+  24,  27,   //35, 36
+  25,  28,   //37, 38
+  -1,  29,   //39, 40
+   -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, //41-> 55
+   -1, -1, -1, -1, -1, -1, -1, -1 // 56-> 63
+};
+
+char *physNames[64] =
+{
+  NULL,
+
+ "    3.3v", "5v      ",
+ "   SDA.0", "5V      ",
+ "   SCL.0", "0v      ",
+ "  GPIO.7", "TxD3    ",
+ "      0v", "RxD3    ",
+ "    RxD2", "GPIO.1  ",
+ "    TxD2", "0v      ",
+ "    CTS2", "GPIO.4  ",
+ "    3.3v", "GPIO.5  ",
+ "    MOSI", "0v      ",
+ "    MISO", "RTS2    ",
+ "    SCLK", "CE0     ",
+ "      0v", "GPIO.11 ",
+ "   SDA.1", "SCL.1   ",
+ " GPIO.21", "0v      ",
+ " GPIO.22", "RTS1    ",
+ " GPIO.23", "0v      ",
+ " GPIO.24", "CTS1    ",
+ " GPIO.25", "TxD1    ",
+ "      0v", "RxD1    ",
+       NULL, NULL,
+       NULL, NULL,
+       NULL, NULL,
+       NULL, NULL,
+       NULL, NULL,
+  "GPIO.17", "GPIO.18",
+  "GPIO.19", "GPIO.20",
+   NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
+};
+#endif
+
 #ifdef CONFIG_ORANGEPI_H3
 int physToWpi[64] =
 {
@@ -339,6 +402,8 @@ void OrangePiReadAll(void)
     printf (" +-----+-----+----------+------+---+-Orange Pi 2G-IOT+---+---+------+---------+-----+--+\n");
 #elif CONFIG_ORANGEPI_H3
     printf (" +-----+-----+----------+------+---+-Orange Pi H3+---+---+------+---------+-----+--+\n");
+#elif CONFIG_BANANAPI_P2_ZERO
+    printf (" +-----+-----+----------+------+---+-Banana Pi P2 zero---+---+------+---------+-----+--+\n");
 #elif CONFIG_ORANGEPI_ZERO
     printf (" +-----+-----+----------+------+---+-Orange Pi Zero+---+---+------+---------+-----+--+\n");
 #elif CONFIG_ORANGEPI_A64
@@ -358,6 +423,8 @@ void OrangePiReadAll(void)
     printf (" +-----+-----+----------+------+---+-Orange Pi 2G-IOT+---+------+----------+-----+-----+\n");
 #elif CONFIG_ORANGEPI_H3
     printf (" +-----+-----+----------+------+---+-Orange Pi H3+---+------+----------+-----+-----+\n");
+#elif CONFIG_BANANAPI_P2_ZERO
+    printf (" +-----+-----+----------+------+---+-Banana Pi P2 zero---+---+------+---------+-----+--+\n");
 #elif CONFIG_ORANGEPI_ZERO
     printf (" +-----+-----+----------+------+---+-Orange Pi Zero+---+------+----------+-----+-----+\n");
 #elif CONFIG_ORANGEPI_A64

@@ -43,6 +43,13 @@ The Open source project of WiringPi on OrangePi. maintain from www.orangepi.org
       sudo ./build OrangePi_H3
       sudo ./build OrangePi_H3 install
     ```
+    On BananaPi P2 zero
+
+    ```
+      cd WiringPi
+      sudo ./build BananaPi_P2_zero
+      sudo ./build BananaPi_P2_zero install
+    ```
     On OrangePi Zero
 
     ```

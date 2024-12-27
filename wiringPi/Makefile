@@ -68,6 +68,11 @@ EXTRA_CFLAGS = -DCONFIG_ORANGEPI_H3
 EXTRA_CFLAGS += -DCONFIG_ORANGEPI
 endif
 
+ifeq ($(PLATFORM), BananaPi_P2_zero)
+EXTRA_CFLAGS = -DCONFIG_BANANAPI_P2_ZERO
+EXTRA_CFLAGS += -DCONFIG_ORANGEPI
+endif
+
 ifeq ($(PLATFORM), OrangePi_ZERO)
 EXTRA_CFLAGS = -DCONFIG_ORANGEPI_ZERO
 EXTRA_CFLAGS += -DCONFIG_ORANGEPI
@@ -103,6 +108,10 @@ SRC += OrangePi.c
 endif
 
 ifeq ($(PLATFORM), OrangePi_H3)
+SRC += OrangePi.c
+endif
+
+ifeq ($(PLATFORM), BananaPi_P2_zero)
 SRC += OrangePi.c
 endif
 
